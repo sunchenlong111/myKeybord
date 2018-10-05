@@ -1,0 +1,19 @@
+*{margin:0;padding:0;}
+a{text-decoration: none;}
+
+kbd{position:relative;width:4em;height:4em;border:1px solid red;display: inline-block;}
+
+#container{text-align: center;}
+/* #container >div:nth-child(2){padding-left:1em;}
+#container >div:nth-child(3) {padding-left: 2em;} */
+
+kbd>button{
+  position:absolute;
+  right:0;
+  bottom:0;
+  display:none;
+}
+
+kbd:hover > button{
+  display: inline-block;
+}
