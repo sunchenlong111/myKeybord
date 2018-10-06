@@ -1,42 +1,71 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 
-a {
-  text-decoration: none;
-}
+* {margin: 0;padding: 0;}
+a {text-decoration: none;}
+body{background: grey url(./images/bg.jpg) no-repeat center center;
+background-size: cover;height:100vh;}
+main{height: 100vh;display: flex;justify-content: center;align-items: flex-start;}
 
-kbd {
-  position: relative;
-  width: 5em;
-  height: 5em;
-  border: 1px solid red;
-  display: inline-block;
-  text-transform: uppercase;
-  vertical-align: top;
-  margin: 5px;
-  line-height: 5em;
-  border-radius: 20px;
+.key{position: relative;width: 50px;height: 45px;display: inline-block;
+  text-transform: uppercase;margin: 5px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F2F2F2 100%);
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.5),
+  0 5px 0 #C9C9C9,
+  0 5px 2px rgba(0, 0, 0, 0.3),
+  0 7px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
-
+kbd:active {box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.2),
+inset 0 2px 3px rgba(0, 0, 0, 0.6),0 1px 0 rgba(255, 255, 255, 0.6);
+}
 #container {
-  text-align: center;
-  margin: 200px auto;
+  background: linear-gradient(180deg, #EEEEEE 0%, #D8D8D8 100%);
+  border-radius: 20px;
+  box-shadow: inset 0 3px 5px rgba(255, 255, 255, 0.3),inset 0 1px 3px rgba(255, 255, 255, 0.5),
+     0 10px 0 #AFAFAF;
+  display: inline-block;
+  margin: 100px auto;position: relative;padding:20px 50px;
 }
 
-/* #container >div:nth-child(2){padding-left:1em;}
-#container >div:nth-child(3) {padding-left: 2em;} */
+#container:after{bottom: 0; box-shadow: 0 10px 80px rgba(0, 0, 0, 0.5); 
+  content:'';height: 50px;left:7.5% ;position: absolute; width: 85%; z-index: -1;
+  background: transparent;
+}
 
+
+.text{
+  color: #9F9F9F; 
+  font-family: 'Muli','Helvetica',sans-serif ;
+  font-size: 16px;
+  position: absolute;
+  left:5px;
+  top:3px;
+}
+
+#container >div:nth-child(2){position:relative;left:25px;}
+#container>div:nth-child(3) {position: relative;left: 50px;}
 kbd>button {
   position: absolute;
-  right: 5px;
+  right: 2px;
   bottom: 5px;
   display: none;
-  border-radius:20px;
+  border-radius:5px;
   border: none; 
+  padding: 2px 1px;
+  font-size: 9px;
+  font-family:'宋体';
+  cursor:pointer;
 }
 
 kbd:hover>button {
   display: inline-block;
+}
+
+kbd>img{
+  width:16px;
+  height:16px;
+  position: absolute;
+  bottom:5px;
+  left:5px;
+  
 }
