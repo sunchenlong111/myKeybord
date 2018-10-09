@@ -61,6 +61,7 @@ window.onload = function () {
   function listenUsers(hash) {
     document.onkeypress = function (e) {
       var keyValue = e.key;
+      if(!(keyValue in hash)) return 
       var website = hash[keyValue];
       console.log(website);
       window.open('http://' + website, '_blank');
@@ -129,13 +130,13 @@ window.onload = function () {
   }
 
   //创建kbd标签，并将img，span，button放进去
-  function createkbd(A, B, C,hash) {
+  function createkbd(span, img, button, hash) {
     var kbd = tag('kbd', {
       className: 'key'
     });
-    kbd.appendChild(A)
-    kbd.appendChild(B)
-    kbd.appendChild(C);
+    kbd.appendChild(span)
+    kbd.appendChild(img)
+    kbd.appendChild(button);
     kbd.addEventListener("click", (e) => {
       var key = e.target;
       if (key.tagName != 'kbd') {
